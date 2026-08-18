@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyncText</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span class="logo-tag">// device sync</span>
+    <h1 class="logo-title">Sync<span>Text</span></h1>
+  </div>
+  <div class="header-meta">
+    peer-to-peer · no account<br>
+    encrypted in transit · nothing stored
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- Intro -->
+  <section class="intro">
+    <h2 class="intro-title">Paste it here, get it there.</h2>
+    <p class="intro-body">
+      A dead-simple way to move a bit of text between your own devices — a login
+      code from your phone, a URL, a paragraph, an SSH key — without email,
+      messaging apps, or a cloud account. Open this page on both devices, link
+      them with a short code, and whatever you type on one appears live on the
+      other. The text travels <strong>directly between the two browsers</strong>
+      over an encrypted peer-to-peer connection; it never lands on a server.
+    </p>
+    <ol class="intro-steps">
+      <li><span class="step-num">1</span> Open this page on both devices.</li>
+      <li><span class="step-num">2</span> Copy the code from one, <strong>Join</strong> it on the other.</li>
+      <li><span class="step-num">3</span> Type or paste — it syncs live.</li>
+    </ol>
+  </section>
+
+  <!-- Connection bar -->
+  <div class="conn-bar">
+    <div class="code-box">
+      <span class="code-label">Your code</span>
+      <span class="code-value" id="myCode">…</span>
+      <button class="ghost-btn" id="copyCode">Copy</button>
+    </div>
+
+    <div class="join">
+      <input id="joinInput" placeholder="CODE" maxlength="6" autocomplete="off" spellcheck="false">
+      <button class="join-btn" id="joinBtn">Join</button>
+    </div>
+
+    <div class="conn-spacer"></div>
+
+    <div class="status">
+      <span class="dot" id="dot"></span>
+      <span id="statusText">Waiting</span>
+    </div>
+  </div>
+
+  <!-- The shared pad -->
+  <textarea id="pad" class="pad" spellcheck="false"
+    placeholder="Type or paste here — it syncs live to the linked device."></textarea>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+<footer class="site-footer">
+  <span class="footer-text">A tool by</span>
+  <a class="footer-brand" href="https://web-sights.co.uk" target="_blank" rel="noopener">
+    <img src="assets/img/web-sights-logo.svg" alt="web-sights.co.uk" class="footer-logo">
+  </a>
+</footer>
+
+<script src="assets/sync.js"></script>
+</body>
+</html>
