@@ -3,9 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Static-host lockdown: allow only the origins this app actually needs.
+       Set via <meta> because GitHub Pages can't send HTTP security headers. -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'none';
+    script-src 'self' https://unpkg.com;
+    style-src 'self' https://fonts.googleapis.com;
+    font-src https://fonts.gstatic.com;
+    img-src 'self';
+    connect-src https://0.peerjs.com wss://0.peerjs.com;
+    base-uri 'none';
+    form-action 'none'">
   <title>SyncText</title>
   <link rel="stylesheet" href="assets/style.css">
-  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"
+    integrity="sha384-nlUQ8ZqCbvStErob+biJNzSgltf6urV3VGqhfIfzhmg9RXmpeRm76ELw0pYnKlTR"
+    crossorigin="anonymous"></script>
 </head>
 <body>
 
