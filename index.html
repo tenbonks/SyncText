@@ -6,8 +6,8 @@
   <!-- Content-Security-Policy (relaxed for WebRTC).
        The real anti-injection protection is script-src (self + the SRI-pinned CDN);
        object-src/base-uri/form-action stay locked. connect-src is deliberately broad:
-       a P2P app must open outward connections (peers, STUN, TURN), and Firefox — unlike
-       Chromium — applies CSP to those, so 'default-src none' with a narrow connect-src
+       a P2P app must open outward connections (peers, STUN, TURN), and Firefox, unlike
+       Chromium, applies CSP to those, so 'default-src none' with a narrow connect-src
        blocked the connection on Firefox. Set via <meta> because GitHub Pages can't send
        HTTP headers. -->
   <meta http-equiv="Content-Security-Policy" content="
@@ -49,8 +49,8 @@
   <section class="intro">
     <h2 class="intro-title">Paste it here, get it there.</h2>
     <p class="intro-body">
-      A dead-simple way to move a bit of text between your own devices — a login
-      code from your phone, a URL, a paragraph, an SSH key — without email,
+      A dead-simple way to move a bit of text between your own devices - a login
+      code from your phone, a URL, a paragraph, an SSH key - without email,
       messaging apps, or a cloud account. Open this page on both devices, link
       them with a short code, and whatever you type on one appears live on the
       other. The text travels <strong>directly between the two browsers</strong>
@@ -59,12 +59,12 @@
     <ol class="intro-steps">
       <li><span class="step-num">1</span> Open this page on both devices.</li>
       <li><span class="step-num">2</span> Copy the code from one, <strong>Join</strong> it on the other.</li>
-      <li><span class="step-num">3</span> Type or paste — it syncs live.</li>
+      <li><span class="step-num">3</span> Type or paste, and it syncs live.</li>
     </ol>
     <p class="intro-note">
       <strong>Won't connect?</strong> This app links your two devices with a direct
-      "walkie-talkie" line between the browsers. Some browser add-ons — ad blockers and
-      privacy tools especially — switch that line off. If your devices can't find each
+      "walkie-talkie" line between the browsers. Some browser add-ons, ad blockers and
+      privacy tools especially, switch that line off. If your devices can't find each
       other, <strong>turn your ad blocker off for this page</strong> (usually one click
       on its toolbar icon), or open a <strong>private / incognito window</strong>, which
       turns add-ons off for you. Either way it works exactly the same.
@@ -94,7 +94,7 @@
 
   <!-- The shared pad -->
   <textarea id="pad" class="pad" spellcheck="false"
-    placeholder="Type or paste here — it syncs live to the linked device."></textarea>
+    placeholder="Type or paste here, it syncs live to the linked device."></textarea>
 
 </main>
 

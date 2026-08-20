@@ -1,5 +1,5 @@
 /* ============================================
-   SyncText — Main Script
+   SyncText - Main Script
    Live, last-writer-wins text sync between two
    browsers over a PeerJS / WebRTC connection.
    ============================================ */
@@ -69,7 +69,7 @@
     c.on('data', (msg) => {
       if (msg && msg.type === 'full') {
         applyingRemote = true;
-        pad.value = msg.text;   // .value (not innerHTML) — synced text is never executed
+        pad.value = msg.text;   // .value (not innerHTML); synced text is never executed
         applyingRemote = false;
       }
     });
@@ -103,6 +103,6 @@
   copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(myCodeEl.textContent)
       .then(() => toast('Code copied'))
-      .catch(() => toast('Copy failed — select it manually'));
+      .catch(() => toast('Copy failed, select it manually'));
   });
 })();

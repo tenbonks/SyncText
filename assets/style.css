@@ -1,5 +1,5 @@
 /* ============================================
-   SyncText — Stylesheet
+   SyncText - Stylesheet
    Fonts: Ubuntu (primary), Noto Sans (secondary), DM Mono (mono)
    Shares the web-sights brand tokens with Bulk WebP Converter.
    ============================================ */
@@ -10,20 +10,20 @@
    CSS Custom Properties (Brand Tokens)
    ----------------------------------- */
 :root {
-  /* Primary — slate blue-gray */
+  /* Primary - slate blue-gray */
   --color-primary:           #243447;
   --color-primary-offset-1:  #141C24;
   --color-primary-offset-2:  #3A4C5C;
   --color-primary-muted:     #EDF2F5;
 
-  /* Secondary — mint highlight */
+  /* Secondary - mint highlight */
   --color-secondary:         #3DDC97;
   --color-secondary-offset-1:#2BBF82;
   --color-secondary-offset-2:#9FF3D1;
   --color-secondary-muted:   #E9FBF5;
   --color-secondary-contrast:#1FA86C;
 
-  /* Tertiary — coral */
+  /* Tertiary - coral */
   --color-tertiary:          #FF6F61;
   --color-tertiary-offset-1: #CC564C;
   --color-tertiary-offset-2: #FF8A75;
