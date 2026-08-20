@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Static-host lockdown: allow only the origins this app actually needs.
-       Set via <meta> because GitHub Pages can't send HTTP security headers. -->
+  <!-- Content-Security-Policy (relaxed for WebRTC).
+       The real anti-injection protection is script-src (self + the SRI-pinned CDN);
+       object-src/base-uri/form-action stay locked. connect-src is deliberately broad:
+       a P2P app must open outward connections (peers, STUN, TURN), and Firefox — unlike
+       Chromium — applies CSP to those, so 'default-src none' with a narrow connect-src
+       blocked the connection on Firefox. Set via <meta> because GitHub Pages can't send
+       HTTP headers. -->
   <meta http-equiv="Content-Security-Policy" content="
-    default-src 'none';
+    default-src 'self';
     script-src 'self' https://unpkg.com;
     style-src 'self' https://fonts.googleapis.com;
     font-src https://fonts.gstatic.com;
     img-src 'self';
-    connect-src https://0.peerjs.com wss://0.peerjs.com stun: turn: turns:;
+    connect-src 'self' https: wss: stun: turn: turns:;
+    object-src 'none';
     base-uri 'none';
     form-action 'none'">
   <title>SyncText</title>
