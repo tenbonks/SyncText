@@ -203,6 +203,21 @@ header {
   flex-shrink: 0;
 }
 
+.intro-note {
+  font-family: var(--font-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text2);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  max-width: 62ch;
+}
+
+.intro-note strong { color: var(--text); font-weight: 600; }
+
 /* -----------------------------------
    Connection Bar
    ----------------------------------- */
